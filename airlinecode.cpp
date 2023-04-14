@@ -6,13 +6,14 @@ void mainMenu();
 class Management
 {
     public:
-        Management();
+        Management()
         {
-            main menu();
+            mainMenu();
 
         }
        
 };
+// above this all codes are correct
 class Details
 {
     public:
@@ -23,16 +24,16 @@ class Details
         string address;
         static int cId;
         char arr[100];
-        void information
+        void information()
         {
             cout<<"\n Enter the Customer ID: ";
             cin>>cId;
             cout<<"\n Enter the Customer Name: ";
             cin>>name;
-            cout<<:"\n Enter the age: ";
+            cout<<"\n Enter the age: ";
             cin>>age;
             cout<<"\n Address: ";
-            cin>>add;
+            cin>>address;
             cout<<"\n Gender";
             cin>>gender;
             cout<<"your details are saved with us";
@@ -56,7 +57,7 @@ class registration
         string  flightN[]={ "Dubai","canada","London","uk","USA",};
         for(int a=0;a<6;a++)
         {
-            cout<<a+1<<flightN[a]<<endl;
+            cout<<(a+1)<<".flight to"<<flightN[a]<<endl;
         }
         cout<<"\n Welcone to the fly India Airlines: "<<endl;
         cout<<"press the number of the country you want to travel to: "<<endl;
@@ -274,14 +275,14 @@ default:
     }
     };
     float registration::charges;
-    int regsitration::choice;
+    int registration::choice;
 
-    class ticket : public registration,Details
+    class ticket : public registration, Details
     {
 public:
 void Bill()
 {
-    srting destination=" ";
+    string destination="";
     ofstream outf("record.txt");
     {
         outf<<"______________________FLY INDIA AIRLINES______________________"<<endl;
@@ -291,13 +292,54 @@ void Bill()
         outf<<"Customer ID: "<<Details::cId<<endl;
         outf<<"Customer Name: "<<Details::name<<endl;
          outf<<"Customer Gender: "<<Details::gender<<endl;
-         outf<<"\tDescription"<<endl
+         outf<<"\tDescription"<<endl;
         
+        if(registration::choice==1)
+        {
+            destination="Dubai";
+        }
+ else if(registration::choice==2)
+        {
+            destination="Canada";
+        }
 
+         else if (registration::choice==3)
+
+        {
+            destination="UK";
+        }
+         else if(registration::choice==4)
+        {
+            destination="USA";
+        }
+
+outf<<"Destination\t\t"<<destination<<endl;
+        outf<<"Flight cost : \t\t"<<registration::charges<<endl;
+
+  }
+  outf.close();
+    }
+    void dispBill()
+    {
+        ifstream ifs("records.txt");
+        {
+            if(!ifs)
+            {
+                cout<<"File error!"<<endl;
+
+            }
+            while(!ifs.eof())
+            {
+                ifs.getline(arr, 100);
+                cout<<arr<<endl;
+            }
+        }
+        ifs.close();
 
     }
-    }
 
+
+};
 
 void mainMenu()
 {
@@ -356,7 +398,7 @@ switch(lchoice)
 case 3: //for ticket and collection
 {
 cout<<"________________GET YOUR TICKET________________\n"<<endl;
-t.bill();
+t.Bill();
 cout<<"Your tickey is printed, you can colect it \n"<<endl;
 cout<<"press 1 to display your ticket";
 
@@ -364,7 +406,7 @@ cin>>back;
 
 if(back==1)
 {
-    t.display();
+    t.dispBill();
     cout<<"Press any key to go back to main menu";
     cin>>back;
     if(back==1)
@@ -388,7 +430,7 @@ case 4: //for exit
     cout<<"Thank you for using our system"<<endl;
     break;
 }
-default:
+default :
 {
     cout<<"Invalid choice please try agaain"<<endl;
     mainMenu();
@@ -398,6 +440,8 @@ default:
 
     }
 int main() {
-    Management Mob;
+    Management Mobj;
     return 0;
-}
+
+
+    }
