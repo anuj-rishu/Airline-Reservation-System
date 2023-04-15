@@ -28,7 +28,7 @@ class Details
         {
             cout<<"\n Enter the Customer ID: ";
             cin>>cId;
-            cout<<"\n Enter the Customer Name: ";
+            cout<<"\n Enter the Customer Name(first name only): ";
             cin>>name;
             cout<<"\n Enter the age: ";
             cin>>age;
@@ -36,7 +36,8 @@ class Details
             cin>>address;
             cout<<"\n Gender: ";
             cin>>gender;
-            cout<<"your details are saved with us ";
+
+            cout<<"YOUR DETAILS ARE SAVE WITH US "<<endl;
         }
 };
 
@@ -292,7 +293,7 @@ class ticket : public registration, Details
                 outf<<"______________________________________________________________"<<endl;
 
                 outf<<"Customer ID: "<<Details::cId<<endl;
-                outf<<"Customer Name: "<<Details::name<<endl;
+                outf<<"Customer Name(first name only): "<<Details::name<<endl;
                 outf<<"Customer Gender: "<<Details::gender<<endl;
                 outf<<"\tDescription"<<endl;
                 
