@@ -40,7 +40,7 @@ class Details
             cout<<"YOUR DETAILS ARE SAVE WITH US "<<endl;
         }
 };
-
+//above codes are correct do not change
 int Details::cId;
 string Details::name;
 string Details::gender;
@@ -279,7 +279,7 @@ class registration
     };
 float registration::charges;
 int registration::choice;
-
+// above codes are correct do not change them
 class ticket : public registration, Details
 {
     public:
@@ -338,7 +338,7 @@ class ticket : public registration, Details
             ifs.close();
         }
 };
-
+// above codes are correct do not change them
 void mainMenu()
 {
     int lchoice;
@@ -443,3 +443,6 @@ int main()
     Management Mobj;
     return 0;
 }
+//all program is correct do not change it
+// written by: 1. ANUJ TIWARI (RA22110310052)
+//             2. AYAAN RAJAK (RA22110310054)
