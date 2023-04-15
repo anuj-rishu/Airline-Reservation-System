@@ -1,9 +1,0 @@
-______________________FLY INDIA AIRLINES______________________
-______________________TICKET AND CHARGES______________________
-___________________________________
-Customer ID: 0
-Customer Name: 
-Customer Gender: 
-	Description
-Destination		USA
-Flight cost : 		80000

@@ -18,7 +18,7 @@ class Details
 {
     public:
         
-        static string name,gender ;
+        static string name,gender;
         int phoneNo;
         int age;
         string address;
@@ -36,7 +36,7 @@ class Details
             cin>>address;
             cout<<"\n Gender: ";
             cin>>gender;
-            cout<<"your details are saved with us"<<endl;
+            cout<<"your details are saved with us ";
         }
 };
 
@@ -54,13 +54,13 @@ class registration
 
         void flights()
         {
-            string  flightN[]={ "Dubai","canada","London","uk"};
+            string  flightN[]={ "Dubai","canada","uk","USA",};
 
             for(int a=0;a<4;a++)
             {
                 cout<<(a+1)<<".flight to "<<flightN[a]<<endl;
             }
-            cout<<"\n Welcone to the  Airlines Booking System: "<<endl;
+            cout<<"\n Welcone to the Airlines Booking System: "<<endl;
             cout<<"press the number of the country you want to travel to: "<<endl;
             cin>>choice;
 
@@ -109,7 +109,7 @@ class registration
                         flights();
                         }
 
-                        cout<<"Press 1 to go back to main menu"<<endl;
+                        cout<<"\nPress 1 to go back to main menu"<<endl;
                         cin>>back;
 
                         if(back==1)
@@ -162,7 +162,7 @@ class registration
                     cout<<"Invalid input , shifting to yhe prevoius menu"<<endl;
                     flights();
                     }
-                    cout<<"Press 1 to go back to main menu"<<endl;
+                    cout<<"\nPress 1 to go back to main menu"<<endl;
                     cin>>back;
 
                     if(back==1)
@@ -201,7 +201,7 @@ class registration
                         cout<<"Invalid input , shifting to yhe prevoius menu"<<endl;
                         flights();
                     }
-                    cout<<"Press 1 to go back to main menu"<<endl;
+                    cout<<"\nPress 1 to go back to main menu"<<endl;
                     cin>>back;
 
                     if(back==1)
@@ -255,7 +255,7 @@ class registration
                     cout<<"Invalid input , shifting to yhe prevoius menu"<<endl;
                     flights();
                     }
-                    cout<<"Press 1 to go back to main menu"<<endl;
+                    cout<<"\nPress 1 to go back to main menu"<<endl;
                     cin>>back;
 
                     if(back==1)
@@ -285,11 +285,11 @@ class ticket : public registration, Details
         void Bill()
         {
             string destination="";
-            ofstream outf("record.txt");
+            ofstream outf("ticketDetails.pdf");
             {
-                outf<<"______________________FLY INDIA AIRLINES______________________"<<endl;
-                outf<<"______________________TICKET AND CHARGES______________________"<<endl;
-                outf<<"___________________________________"<<endl;
+                outf<<"______________________ Airlines Booking System_______ _________"<<endl;
+                outf<<"______________________TICKET___________________________________"<<endl;
+                outf<<"______________________________________________________________"<<endl;
 
                 outf<<"Customer ID: "<<Details::cId<<endl;
                 outf<<"Customer Name: "<<Details::name<<endl;
@@ -321,7 +321,7 @@ class ticket : public registration, Details
         }
         void dispBill()
         {
-            ifstream ifs("records.txt");
+            ifstream ifs("ticketDetails.pdf");
             {
                 if(!ifs)
                 {
@@ -344,19 +344,19 @@ void mainMenu()
     int schoice;
     int back;
 
-    cout<<"\t WELLCOME TO  AIRLINES BOOKINGS \n"<<endl;
-    cout<<"\t __________________MAIN MENU____________________"<<endl;
+    cout<<"\t WELL COME TO FLY INDIA AIRLINES\n"<<endl;
+    cout<<"\t _______________________MAIN MENU________________________"<<endl;
 
-    cout<<"\t________________________________________________"<<endl;
-    cout<<"\t|\t \t\t                  \t| "<<endl;
+    cout<<"\t _______________________________________________________"<<endl;
+    cout<<"\t|\t \t\t\t\t\t\t| "<<endl;
     //create a structure whuch will ask the to prees a particular buttion to open a particular functionality
 
-    cout<<"\t|\t Press 1 to add the customer Details \t|"<<endl;
-    cout<<"\t|\t Press 2 to for flight registration  \t|"<<endl;
-    cout<<"\t|\t Press 3 to Ticket and charges       \t|"<<endl;
-    cout<<"\t|\t Press 4 to  Exist                   \t|"<<endl;
-    cout<<"\t|\t \t\t                     \t| "<<endl;
-    cout<<"\t_________________________________________________"<<endl;
+    cout<<"\t|\t Press 1 to add the customer Details    \t|"<<endl;
+    cout<<"\t|\t Press 2 to for flight registration     \t|"<<endl;
+    cout<<"\t|\t Press 3 to Ticket and charges          \t|"<<endl;
+    cout<<"\t|\t Press 4 to  Exit                       \t|"<<endl;
+    cout<<"\t|\t \t\t\t\t\t\t| "<<endl;
+    cout<<"\t________________________________________________________"<<endl;
 
     cout<<"\t Enter your choice: ";
     cin>>lchoice;
@@ -371,7 +371,7 @@ void mainMenu()
             {
                 cout<<"________________Customer________________\n"<<endl;
                 d.information();
-                cout<<"Press 1 to go back to main menu"<<endl;
+                cout<<"\nPress 1 to go back to main menu"<<endl;
                 cin>>back;
 
                 if(back==1)
@@ -396,7 +396,7 @@ void mainMenu()
                 {
                 cout<<"________________GET YOUR TICKET________________\n"<<endl;
                 t.Bill();
-                cout<<"Your ticket is printed, you can colect it \n"<<endl;
+                cout<<"Your tickey is printed, you can colect it \n"<<endl;
                 cout<<"press 1 to display your ticket";
 
                 cin>>back;
@@ -404,7 +404,7 @@ void mainMenu()
                     if(back==1)
                     {
                         t.dispBill();
-                        cout<<"Press 1 to go back to main menu";
+                        cout<<"\nPress 1 to go back to main menu";
                         cin>>back;
                         if(back==1)
                         {
