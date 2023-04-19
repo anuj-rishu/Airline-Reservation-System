@@ -2,8 +2,8 @@ ______________________ Airlines Booking System_______ _________
 ______________________TICKET___________________________________
 ______________________________________________________________
 Customer ID: 123
-Customer Name(first name only): ANUJ
-Customer Gender: MALE
+Customer Name(first name only): anuj
+Customer Gender: male
 	Description
-Destination		Canada
-Flight cost : 		40000
+Destination		UK
+Flight cost : 		44000

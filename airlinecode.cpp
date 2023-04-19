@@ -322,7 +322,7 @@ class ticket : public registration, Details
         }
         void dispBill()
         {
-            ifstream ifs("ticketDetails.pdf");
+            ifstream ifs("ticketDetails.pdf"); //ifstream is used to read the file
             {
                 if(!ifs)
                 {
@@ -345,7 +345,7 @@ void mainMenu()
     int schoice;
     int back;
 
-    cout<<"\t WELL COME TO FLY INDIA AIRLINES\n"<<endl;
+    cout<<"\t WELCOME TO Airlines Booking System\n"<<endl;
     cout<<"\t _______________________MAIN MENU________________________"<<endl;
 
     cout<<"\t _______________________________________________________"<<endl;
@@ -362,16 +362,16 @@ void mainMenu()
     cout<<"\t Enter your choice: ";
     cin>>lchoice;
 
-    Details d;
-    registration r;
-    ticket t;
+    Details d; //object of class Details
+    registration r; //object of class registration
+    ticket t;//object of class ticket
 
     switch(lchoice)
     {
         case 1: //for customer details
             {
                 cout<<"________________Customer________________\n"<<endl;
-                d.information();
+                d.information(); //used to get the customer details
                 cout<<"\nPress 1 to go back to main menu"<<endl;
                 cin>>back;
 
@@ -404,7 +404,7 @@ void mainMenu()
 
                     if(back==1)
                     {
-                        t.dispBill();
+                        t.dispBill(); //  used to display the ticket
                         cout<<"\nPress 1 to go back to main menu";
                         cin>>back;
                         if(back==1)
@@ -428,7 +428,7 @@ void mainMenu()
                     cout<<"Thank you for using our system"<<endl;
                     break;
                 }
-                default :
+                default : //used to check the input is valid or not
                     {
                         cout<<"Invalid choice please try agaain"<<endl;
                         mainMenu();
