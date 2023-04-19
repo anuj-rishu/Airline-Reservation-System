@@ -1,6 +1,6 @@
 #include<iostream>
-#include<fstream>
-#include<iomanip>
+#include<fstream> // for file handling
+#include<iomanip> // for setw() // SETW() is used to set the width of the output
 using namespace std;
 void mainMenu();
 class Management
@@ -18,7 +18,7 @@ class Details
 {
     public:
         
-        static string name,gender;
+        static string name,gender; //STATIC VARIABLE IS USED TO DECLARE THE VARIABLE WHICH IS COMMON FOR ALL THE OBJECTS
         int phoneNo;
         int age;
         string address;
@@ -285,8 +285,8 @@ class ticket : public registration, Details
     public:
         void Bill()
         {
-            string destination="";
-            ofstream outf("ticketDetails.pdf");
+            string destination=""; 
+            ofstream outf("ticketDetails.pdf"); //OFSTREAM IS USED TO WRITE IN A FILE
             {
                 outf<<"______________________ Airlines Booking System_______ _________"<<endl;
                 outf<<"______________________TICKET___________________________________"<<endl;
